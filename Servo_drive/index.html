@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bartosz Kurek - Portfolio</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="left">
+        <h1>Bartosz Kurek</h1>
+
+        <!-- Project list including Home button with a specific class -->
+        <ul>
+          <li><a class="home-button" href="../index.html">Home</a></li>
+          <li>
+            <a href="../Anthropomorphic_Manipulator/index.html"
+              >Anthropomorphic Manipulator</a
+            >
+          </li>
+          <li>
+            <a href="../Stanowisko_Pneumatyka/index.html">Pneumatic Station</a>
+          </li>
+          <li>
+            <a href="../Peristaltic_Pump/index.html">Peristaltic Pump</a>
+          </li>
+          <li>
+            <a href="../Servo_drive/">Servo Drive</a>
+          </li>
+          <li>
+            <a href="../KostkaRubikaUnity/index.html">Rubic's Cube 3D</a>
+          </li>
+          <li>
+            <a href="../KostkaRubika2D/index.html">Rubic's Cube 2D</a>
+          </li>
+          <li>
+            <a href="../SFML_Games/index.html">SFML Games</a>
+          </li>
+        </ul>
+      </div>
+      <div id="right">
+        <h1>Servo Napęd</h1>
+        <p>
+          Projekt ten polegał na stworzeniu regulatora PID na mikrokontrolerze
+          NUCLEO, który odbiera sygnał z enkodera magnetycznego i steruje
+          silnikiem krokowym tak, aby kąt silnika dążył do zadanej przez nas
+          wartości. Dzięki temu mogliśmy dokładnie obserwować, jak zmiany
+          parametrów regulatora PID wpływają na stabilność i precyzję regulacji
+          sygnału wyjściowego, co pozwoliło na lepsze zrozumienie wpływu tych
+          parametrów na jakość sterowania.
+        </p>
+        <p>
+          Silnik działa w trzech trybach: DEBUG, MANUAL i REMOTE. W trybie DEBUG
+          silnik podąża za wartością odczytaną bezpośrednio z pokrętła,
+          działając jako regulator dwupołożeniowy. W trybie MANUAL silnik
+          przemieszcza się do zadanej wartości ustawionej za pomocą pokrętła,
+          która jest zatwierdzana przyciskiem i kontrolowana przez regulator
+          PID. Natomiast tryb REMOTE umożliwia zmianę wartości regulatora PID
+          oraz zadanej pozycji silnika za pomocą aplikacji napisanej w Matlab.
+        </p>
+        <p>
+          Przełączanie trybów odbywa się poprzez USART, a komunikacja z
+          aplikacją Matlab jest realizowana przez Ethernet przy użyciu protokołu
+          UDP.
+        </p>
+        <video width="640" height="360" controls>
+          <source src="servovideo.mp4" type="video/mp4" />
+          Twoja przeglądarka nie obsługuje tego formatu wideo.
+        </video>
+        <p>
+          Projekt tworzony wraz z kolegą Kacprem Kraińskim.
+          <a href="https://github.com/Krasa35/angle-indicator">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
